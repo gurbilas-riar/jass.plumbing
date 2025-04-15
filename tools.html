@@ -19,14 +19,14 @@
             .gallery {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                gap: 20px;
+                gap: 80px;
                 padding: 40px 20px;
                 max-width: 500px;
                 margin: auto;
             }
             .gallery img {
                 width: 100%;
-                height: 200px;
+                height: 100%;
                 object-fit: cover;
                 border-radius: 15px;
                 box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -39,8 +39,8 @@
                 color:antiquewhite;
                 display: flex;
                 align-items: center;
-                gap: 400px; /* space between logo and text */
-                font-size: 80px;
+                gap: 300px; /* space between logo and text */
+                font-size: 200px;
                 font-weight: lighter;
                 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                 font-style: italic;
@@ -67,9 +67,9 @@
 <body>
     <header>
         <div class="logo-heading">
-            <img src="/jass.plumbing/logo.jpg" alt="Logo">
+            <img src="/jass.plumbing/logo.jpg" alt="Logo" style="margin-left: 40px;">
             <h4 style="text-align: center; font-size: xx-large;">TOOLS</h4>
-            <a href="https://www.instagram.com/milwaukeetool/"><img src="/jass.plumbing/tool6.jpg"></a>
+            <a href="https://www.instagram.com/milwaukeetool/"><img src="/jass.plumbing/tool6.jpg" style="margin-right: 40px;"></a>
         </div>
     </header>
     <section class="gallery">
