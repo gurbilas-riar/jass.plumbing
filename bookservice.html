@@ -1,0 +1,103 @@
+<section class="order-section">
+    <fieldset><legend><h2>Book Your Service</h2></legend>
+    <form class="order-form" action="connect.php" method="post"> 
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required />
+  
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" />
+
+      <label for="gmail">Enter gmail account:</label>
+      <input type="email" id="gmail" name="gmail" required />
+
+      <label for="slot">Book a slot:</label>
+      <input type="date" id="slot" name="slot" />
+  
+      <label for="items">Choose area of service:</label>
+      <select id="items" name="area" required>
+        <option value="">--Choose area of service:--</option>
+        <option value="Kitchen">Kitchen</option>
+        <option value="Washroom">Washroom</option>
+        <option value="Bedroom">Bedroom</option>
+        <option value="Backyard">Backyard</option>
+        <option value="Underground Piping">Underground Piping</option>
+        <option value="Hall">Hall</option>
+        <option value="others">Other</option>
+      </select>
+  
+      <button type="submit" id="sb" name="sb">BOOK SERVICE</button>
+    </form>
+    </fieldset>
+  </section>
+  <style>
+  .order-section {
+    padding-left: 500px;
+    padding-right: 500px;
+    padding-bottom: 150px;
+    background: url('/jass.plumbing/new1background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+  }
+  
+  .order-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #cecece;
+  }
+  
+  .order-form {
+    color:#b3b2b2;
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .order-form label {
+    color:#b3b2b2;
+    font-weight: bold;
+    text-align: left;
+  }
+  
+  .order-form input,
+  .order-form select {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .order-form button {
+    background-color: #505050;
+    color: white;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .order-form button:hover {
+    background-color: #272727;
+  }
+  </style>
+  <a href="javascript:history.back()" style="text-decoration: none; padding: 10px 20px; background-color: #7e7e7e; color: white; border-radius: 5px;">← Back</a>
+
+   <script>
+    document.querySelector('.order-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const item = document.getElementById('items').value;
+      const date = document.getElementById('slot').value;
+      alert(`Thanks ${name}, your service booking for "${item}" on "${date}" has been placed! `);
+      this.reset();
+    });
+    
+
+  </script>
+  
+  
